@@ -16,32 +16,39 @@ super + alt + Return
 
 # Rofi App Launcher
 alt + F1
-	rofi_launcher
+       rofi_launcher
 
-# Rofi Run
+# Rofi Run => Cambio
 alt + F2
 	rofi_runner
 
-# Rofi Menus/Applets
-super + {m,n,r,s,t,w,x}
-	{rofi_music,nmd,rofi_asroot,rofi_screenshot,rofi_themes,rofi_windows,rofi_powermenu}
+# Rofi Menus
+super + {m,n,r,s,w}
+	{rofi_music,nmd,rofi_asroot,rofi_screenshot,rofi_windows}
+
+super + shift + {t,q}
+        {rofi_themes,rofi_powermenu}
 
 ##---------- Applications ----------##
 
 # Launch Apps
-super + shift + {f,w,e}
-	{thunar,firefox,geany}
+super + shift + {a,v,c}
+	{thunar,vivaldi,code}
+
+#Kitty Terminal
+super + t 
+      kitty
 
 # Terminal Apps
-ctrl + alt + {v,r,h}
-	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {vim,ranger,htop}
+super + shift + {n,r}
+	kitty -e {nvim,ranger}
 
 # Color Picker
-super + p
+super + shift + p
 	bspcolorpicker
 
 # Music
-ctrl + alt + m
+super + shift + m
 	bspmusic
 
 # Lockscreen
@@ -88,67 +95,76 @@ XF86Audio{Next,Prev,Play,Stop}
 
 ##---------- Bspwm ----------##
 
-# Hide/Unhide Window
-super + shift + h
+#--------- Windows
+
+# selecionar y mover ventana activa
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# Minimizar y maximizar ventanas
+super + shift + {Down}
 	bspwinmask
 
+# Cerrar ventanas
+ctrl + alt + {q,r}
+	bspc {quit,wm -r}
+
 # Close App
-super + {_,shift + }c
+super + {_,shift + }x
 	bspc node -{c,k}
 
 # kill window
 ctrl + alt + Escape
     xkill
 
-# Quit/Restart bspwm
-ctrl + shift + {q,r}
-	bspc {quit,wm -r}
-	
 # Reload Keybindings
-super + Escape
-	pkill -USR1 -x sxhkd
+#super + Escape
+	#pkill -USR1 -x sxhkd
 
-# Switch workspace
-ctrl + alt + {Left,Right}
-	bspc desktop -f {prev.local,next.local}
-
-# Switch workspace or Send focused Node to another workspace
+# Mover ventana a escritorio (1-8)
 super + {_,shift + }{1-8}
 	bspc {desktop -f,node -d} '^{1-8}' '--follow'
 
-# Send focused Node to workspace directionally
-super + ctrl + shift + {Left,Right}
+# Mover ventana escritorio con las flechas
+super + {Left,Right}
 	bspc node -d {prev,next} '--follow'
 
-# Change focus of the Node or Swap Nodes
-super + {_,shift + }{Left,Down,Up,Right}
-	bspc node -{f,s} {west,south,north,east}
-
-# Move floating windows
-super + alt + shift + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-# Expanding windows
-super + control + {Left,Right,Up,Down}
+# Expandir ventana
+super + control + {h,l,k,j}
 	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
-	
-# Shrinking windows
-super + alt + {Left,Right,Up,Down}
+
+# Disminiur ventana
+super + alt + {h,l,k,j}
 	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
 
-# Split horizontal, vertical or cancel
-super + {h,v,q}
-	bspc node -p {east,south,cancel}
+##--------- Escritorios
 
-# Preselect the ratio
+# Cambiar de escritorio 
+ctrl + alt + {Left,Right}
+	bspc desktop -f {prev.local,next.local}
+
+# Mover ventana el modo float
+super + alt + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# Crear una nueva ventana en modo split horizontal, vertical o cancelar
+super + ctrl + {Right,Up,Down}
+	bspc node -p {east,south}
+
+super + Escape 
+	bspc node -p cancel
+
+# ratio de las ventanas en modo split
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
+#--- Modos
+#
 # Toggle Layout (Tiled/Monocle)
-super + l
+super + i
 	bspc desktop -l next
 
-# Toggle Fullscreen
+# Fullscreen
 super + f
     bspc node -t "~"fullscreen
 
