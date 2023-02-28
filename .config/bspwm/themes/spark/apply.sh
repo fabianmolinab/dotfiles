@@ -84,7 +84,7 @@ apply_rofi() {
 	cat > ${PATH_ROFI}/shared/colors.rasi <<- EOF
 		* {
 		    background:     ${element_bg};
-		    background-alt: ${color15};
+		    background-alt: ${color8};
 		    foreground:     ${element_fg};
 		    selected:       ${accent};
 		    active:         ${color10};

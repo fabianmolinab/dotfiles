@@ -36,7 +36,7 @@ super + shift + {a,v,c}
 	{thunar,vivaldi,code}
 
 #Kitty Terminal
-super + t 
+super + t
       kitty
 
 # Terminal Apps
