@@ -1,3 +1,5 @@
+# ref: ~/.zsh
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -75,6 +77,9 @@ alias cl="clear" #Clear terminal
 alias fh="find ~/ -name $1"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#Go
+export GOPATH=$HOME/go
 
 # pnpm
 export PNPM_HOME="/home/fabian/.local/share/pnpm"
