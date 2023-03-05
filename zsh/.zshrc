@@ -1,28 +1,12 @@
 # ref: ~/.zsh
 
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-#FZF
-export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --no-ignore-vcs"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_DEFAULT_OPTS="--height 96% --reverse --preview 'cat {}'"
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-POWERLEVEL9K_MODE="nerdfont-complete"
-
+ZSH_THEME="spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
- CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 
 # Uncomment the following line to enable command auto-correction.
@@ -32,26 +16,40 @@ ENABLE_CORRECTION="true"
 
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-z)
+plugins=(git nvm zsh-autosuggestions zsh-syntax-highlighting zsh-z)
 source $ZSH/oh-my-zsh.sh
 
- #Preferred editor for local and remote sessions
+#Plugin manager
+source ~/.zplug/init.zsh
+
+#Prompt
+source ~/.spaceshiprc.zsh
+
+#z-zsh
+zplug "agkozak/zsh-z"
+
+#zsh-autosuggestions
+zplug "zsh-users/zsh-autosuggestions"
+
+#zsh syntax-highlighting
+zplug "zsh-users/zsh-syntax-highlighting"
+
+zplug "spaceship-prompt/spaceship-prompt" 
+
+#Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='nvim'
  else
    export EDITOR='nano'
  fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
+#---- ALIAS -----
 #exa
 alias -g ll="exa -l -g --icons -h"
 alias -g lla="exa -lahg --icons"
 alias -g llh="exa -l -g --icons --tree --level=2"
 alias fzfi="rg --files --hidden --follow --no-ignore-vcs -g '!{node_modules,.git}' | fzf"
 alias tree='exa -T --git --icons --classify --group --group-directories-first --time-style=long-iso --color-scale -a -I=".git|.svn|.hg|CSV|.DS_Store|Thumbs.db|node_modules|bower_components|.code-search"'
-
 
 # Pacman 
 alias install="sudo pacman -S"
@@ -76,12 +74,15 @@ alias gc="git commit"
 alias cl="clear" #Clear terminal
 alias fh="find ~/ -name $1"
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-#Go
+#-------- Paths Config
+#----Go
 export GOPATH=$HOME/go
 
-# pnpm
-export PNPM_HOME="/home/fabian/.local/share/pnpm"
+#----PNPM 
+export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-# pnpm end
+
+#----NVM 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
