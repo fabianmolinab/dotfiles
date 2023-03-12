@@ -46,7 +46,7 @@ geany_colors='spark.conf'
 geany_font='JetBrains Mono 10'
 
 # Appearance
-gtk_font='Noto Sans 10'
+gtk_font='SF Pro Display 11'
 gtk_theme='Spark'
 icon_theme='Luv-Folders'
 cursor_theme='Vimix'
