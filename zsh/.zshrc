@@ -43,6 +43,9 @@ zplug "spaceship-prompt/spaceship-prompt"
    export EDITOR='nano'
  fi
 
+ #Text Editor Git
+ 
+export GIT_EDITOR='/usr/bin/nvim -c "set fenc=utf-8" -c "set spell" -c "set syn=gitcommit"'
 #---- ALIAS -----
 #exa
 alias -g ll="exa -l -g --icons -h"
