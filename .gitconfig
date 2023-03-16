@@ -1,3 +1,7 @@
 [user]
 	email = molinafabian11b@gmail.com
 	name = fabianmolinab
+[alias]
+	s = status
+	lg = log --all --graph --oneline
+	a = add .
