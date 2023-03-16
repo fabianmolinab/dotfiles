@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-
-## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
-##
 ## Script To Apply Themes
 
 ## Theme ------------------------------------

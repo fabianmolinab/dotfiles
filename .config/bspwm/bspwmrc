@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
-
-## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
-##
-## BSPWM config file for Archcraft
-
 ## General ---------------------------------------------------#
 
 ## Bspwm config directory
