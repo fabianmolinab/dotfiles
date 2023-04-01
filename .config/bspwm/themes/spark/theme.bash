@@ -38,7 +38,7 @@ rofi_font='JetBrainsMono Nerd Font 10'
 rofi_icon='Papirus-Apps'
 
 # Terminal
-terminal_font_name='JetBrainsMono Nerd Font'
+terminal_font_name='SF Mono'
 terminal_font_size='10'
 
 # Geany
@@ -76,5 +76,5 @@ bspwm_nbc="$background"
 bspwm_abc="$color5"
 bspwm_pfc="$color2"
 bspwm_border='2'
-bspwm_gap='15'
+bspwm_gap='8'
 bspwm_sratio='0.50'
