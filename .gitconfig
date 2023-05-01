@@ -5,3 +5,4 @@
 	s = status
 	lg = log --all --graph --oneline
 	a = add .
+	c = commit
