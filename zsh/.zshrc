@@ -1,9 +1,9 @@
 # ref: ~/.zsh
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+#export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="spaceship"
+#ZSH_THEME="spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -16,15 +16,7 @@ ENABLE_CORRECTION="true"
 
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git nvm zsh-autosuggestions zsh-syntax-highlighting zsh-z)
-source $ZSH/oh-my-zsh.sh
-
-#Plugin manager
 source ~/.zplug/init.zsh
-
-#Prompt
-source ~/.spaceshiprc.zsh
-
 #z-zsh
 zplug "agkozak/zsh-z"
 
@@ -32,9 +24,27 @@ zplug "agkozak/zsh-z"
 zplug "zsh-users/zsh-autosuggestions"
 
 #zsh syntax-highlighting
-zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
-zplug "spaceship-prompt/spaceship-prompt" 
+zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+    echo
+fi
+
+zplug load
+
+#plugins=(git nvm zsh-autosuggestions zsh-syntax-highlighting zsh-z)
+#source $ZSH/oh-my-zsh.sh
+
+#Plugin manager
+
+#Prompt
+source ~/.spaceshiprc.zsh
 
 #Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -46,6 +56,7 @@ zplug "spaceship-prompt/spaceship-prompt"
  #Text Editor Git
  
 export GIT_EDITOR='/usr/bin/nvim -c "set fenc=utf-8" -c "set spell" -c "set syn=gitcommit"'
+
 #---- ALIAS -----
 #exa
 alias -g ll="exa -l -g --icons -h"
