@@ -3,24 +3,29 @@
 font:
   # Normal (roman) font face
   normal:
-    family: "JetBrainsMono Nerd Font"
+    #family: "Dank Mono"
     #family: "Cartograph CF"
-    #style: bold
+    #family: "Jetbrains Mono"
+    #family: "Hack Nerd Font"
+    #family: "SF Mono"
+    #family: Hasklig
+    family: "BlexMono Nerd Font"
+    style: text
 
   # Bold font face
   bold:
-    family: "JetBrainsMono Nerd Font"
-    #style: bold
+    #family: "Dank Mono"
+    style: bold
 
   # Italic font face
   italic:
-    family: "JetBrainsMono Nerd Font"
-    #style: italic
+    #family: "Dank Mono"
+    style:  text italic
 
   # Bold italic font face
   bold_italic:
-    family: "JetBrainsMono Nerd Font"
-    #style: Bold Italic
+    #family: "Dank Mono"
+    style: bold italic
 
   # Point size
   size: 13
@@ -28,9 +33,9 @@ font:
   # Offset
   offset:
     x: 0
-    y: 0
+    y: 2
 
-  # Glyph offset
-  #glyph_offset:
-    #x: 0
-    #y: 2
+  ## Glyph offset
+  glyph_offset:
+    x: 0
+    y: 2
