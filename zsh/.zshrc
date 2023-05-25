@@ -1,50 +1,41 @@
-# ref: ~/.zsh
-
 # Path to your oh-my-zsh installation.
-#export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
+# Set the default oh-my-zsh theme.
 #ZSH_THEME="spaceship"
 
-# Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+# Set case-insensitive autocompletion.
+unsetopt caseglob
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
+# Add plugins to the plugin list.
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-z)
 
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# Initialize oh-my-zsh.
+source $ZSH/oh-my-zsh.sh
 
-# COMPLETION_WAITING_DOTS="true"
-
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
+# Add zplug plugin manager.
 source ~/.zplug/init.zsh
-#z-zsh
+
+# Add zsh-z plugin.
 zplug "agkozak/zsh-z"
 
-#zsh-autosuggestions
+# Add zsh-autosuggestions plugin.
 zplug "zsh-users/zsh-autosuggestions"
 
-#zsh syntax-highlighting
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# Add zsh-syntax-highlighting plugin.
+zplug "zsh-users/zsh-syntax-highlighting"
 
+# Add spaceship prompt theme.
 zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-    echo
-fi
-
-zplug load
-
-#plugins=(git nvm zsh-autosuggestions zsh-syntax-highlighting zsh-z)
-#source $ZSH/oh-my-zsh.sh
-
-#Plugin manager
+# Load the plugins and the theme.
+zplug load --verbose
 
 #Prompt
-source ~/.spaceshiprc.zsh
+#source ~/.spaceshiprc.zsh
 
 #Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
