@@ -35,7 +35,7 @@ zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:th
 zplug load --verbose
 
 #Prompt
-#source ~/.spaceshiprc.zsh
+source ~/.spaceshiprc.zsh
 
 #Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
