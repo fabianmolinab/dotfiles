@@ -50,11 +50,11 @@ export GIT_EDITOR='/usr/bin/nvim -c "set fenc=utf-8" -c "set spell" -c "set syn=
 
 #---- ALIAS -----
 #exa
-alias -g ll="exa -l -g --icons -h"
-alias -g lla="exa -lahg --icons"
-alias -g llh="exa -l -g --icons --tree --level=2"
+alias -g ll="exa -l --group-directories-first --icons --classify -h --no-user"
+alias -g lla="exa -lah --group-directories-first --icons --classify --no-user"
+alias -g llh="exa -l --group-directories-first --icons --tree --classify --no-user --level=2"
 alias fzfi="rg --files --hidden --follow --no-ignore-vcs -g '!{node_modules,.git}' | fzf"
-alias tree='exa -T --git --icons --classify --group --group-directories-first --time-style=long-iso --color-scale -a -I=".git|.svn|.hg|CSV|.DS_Store|Thumbs.db|node_modules|bower_components|.code-search"'
+alias tree='exa -T --icons --classify --group --group-directories-first --time-style=long-iso --color-scale -a -I=".git|.svn|.hg|CSV|.DS_Store|Thumbs.db|node_modules|bower_components|.code-search"'
 
 # Pacman 
 alias install="sudo pacman -S"
