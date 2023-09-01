@@ -1,9 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Set the default oh-my-zsh theme.
-#ZSH_THEME="spaceship"
-
 # Set case-insensitive autocompletion.
 unsetopt caseglob
 autoload -Uz compinit
@@ -11,7 +8,7 @@ compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # Add plugins to the plugin list.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-z)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-z )
 
 # Initialize oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
@@ -29,13 +26,13 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
 
 # Add spaceship prompt theme.
-zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+#zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 # Load the plugins and the theme.
 zplug load --verbose
 
 #Prompt
-source ~/.spaceshiprc.zsh
+eval "$(starship init zsh)"
 
 #Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
