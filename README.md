@@ -18,7 +18,7 @@ Install zsh with your package manager
 ```zsh
 sudo apt install zsh
 ```
-##### Feadora
+##### Fedora
 ```zsh
 sudo dnf install zsh
 ```
@@ -55,7 +55,7 @@ exec zsh
 ```
 * And install [eza](https://github.com/eza-community/eza) for the linux distros
 
-#### Opcional. create the file for zsh to save the history
+#### Create the file for zsh to save the history
 
 ```bash
 touch ~/.zsh_history
