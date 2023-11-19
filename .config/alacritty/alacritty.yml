@@ -1,7 +1,7 @@
 ## Import files (Colors, Fonts, Etc)
 import:
   #- ~/.config/alacritty/colors.yml
-  - ~/.config/alacritty/colorschemes/One_dark.yaml
+  - ~/.config/alacritty/colorschemes/Ayu_dark.yaml
   - ~/.config/alacritty/fonts.yml
 
 ## Set environment variables
@@ -28,7 +28,7 @@ window:
   multiplier: 3
 
 ## Background opacity
-  #opacity: 0.9
+#opacity: 0.9
 
 ## Cursor
 cursor:
