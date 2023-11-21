@@ -73,6 +73,8 @@ alias fh="find ~/ -name $1"
 #-------- Paths Config
 #----Go
 export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 #----PNPM 
 export PNPM_HOME="$HOME/.local/share/pnpm"
