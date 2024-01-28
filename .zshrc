@@ -73,8 +73,7 @@ alias fh="find ~/ -name $1"
 #-------- Paths Config
 #----Go
 export GOPATH=$HOME/go
-export GOROOT=/usr/local/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+#export GOROOT=/usr/local/go
 
 #----PNPM 
 export PNPM_HOME="$HOME/.local/share/pnpm"
@@ -116,3 +115,10 @@ SAVEHIST=10000
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# bun completions
+[ -s "/home/fabian/.bun/_bun" ] && source "/home/fabian/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

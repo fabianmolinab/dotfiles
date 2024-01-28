@@ -1,5 +1,5 @@
 [font]
-size = 14
+size = 17
 
 [font.bold]
 style = "bold"
@@ -15,8 +15,8 @@ y = 0
 style = "italic"
 
 [font.normal]
-family = "iMWritingMono Nerd Font"
-style = "text"
+family = "Dank Mono"
+style = "regular"
 
 [font.offset]
 x = 0
