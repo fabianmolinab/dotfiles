@@ -1,0 +1,25 @@
+import:
+  - /home/fabian/.config/alacritty/colorschemes/Gruvbox_material.yml
+  - /home/fabian/.config/alacritty/fonts.yml
+
+live_config_reload: true
+
+cursor:
+  unfocused_hollow: false
+  style:
+    blinking: "On"
+    shape: "Beam"
+
+env:
+  TERM: "alacritty"
+  WINIT_X11_SCALE_FACTOR: "1.0"
+
+shell:
+  program: "/bin/zsh"
+  args:
+    - "--login"
+
+window:
+  padding:
+    x: 0
+    y: 0

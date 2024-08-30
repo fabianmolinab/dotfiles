@@ -1,0 +1,23 @@
+font:
+  size: 17
+
+  bold:
+    style: "bold"
+
+  bold_italic:
+    style: "bold italic"
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+  italic:
+    style: "italic"
+
+  normal:
+    family: "Dank Mono"
+    style: "regular"
+
+  offset:
+    x: 0
+    y: 0
