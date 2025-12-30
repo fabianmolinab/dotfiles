@@ -1,0 +1,25 @@
+
+[cursor]
+unfocused_hollow = false
+
+[cursor.style]
+blinking = "On"
+shape = "Beam"
+
+[env]
+TERM = "alacritty"
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[terminal.shell]
+args = ["--login"]
+program = "/bin/zsh"
+
+[window.padding]
+x = 0
+y = 0
+
+[general]
+live_config_reload = true
+import = ["/home/fabian/.config/alacritty/colorschemes/Gruvbox_material.toml", "/home/fabian/.config/alacritty/fonts.toml"]
+
+[terminal]
