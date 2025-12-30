@@ -6,3 +6,6 @@
 	lg = log --all --graph --oneline
 	a = add .
 	c = commit
+
+[includeIf "gitdir:~/trabajo/"]
+  path = ~/.gitconfig-trabajo
