@@ -106,3 +106,8 @@ autoload -Uz _zinit
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/fabianmolinab/.lmstudio/bin"
+# End of LM Studio CLI section
+

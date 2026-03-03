@@ -1,0 +1,96 @@
+[
+  // ------------------------------------------------------
+  // 1. MODO INSERTAR (Salida rápida)
+  // ------------------------------------------------------
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j j": "vim::NormalBefore",
+    },
+  },
+
+  // ------------------------------------------------------
+  // 2. MODO NORMAL (LSP y Atajos principales)
+  // ------------------------------------------------------
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      // --- TUS NUEVOS ATAJOS DE LSP (Diagnósticos) ---
+
+      // <space>e : Muestra el error flotante (igual que tu config lua)
+      "space e": "editor::Hover",
+
+      // [d y ]d : Navegar entre errores
+      "[ d": "editor::GoToPrevDiagnostic",
+      "] d": "editor::GoToNextDiagnostic",
+
+      // <leader>el : Abrir panel inferior con lista de errores (setloclist)
+      "space e l": "diagnostics::Deploy",
+
+      // gd y K (Ya son nativos, pero si quisieras forzarlos sería así):
+      // "g d": "editor::GoToDefinition",
+      // "shift-k": "editor::Hover",
+
+      // --- GESTIÓN DE ARCHIVOS Y PANELES (Lo que ya tenías) ---
+      "space w": "workspace::Save",
+      "space q": "pane::CloseActiveItem",
+      "space q q": "pane::CloseActiveItem",
+
+      // --- NAVEGACIÓN BUFFERS ---
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePrevItem",
+      "space t": "workspace::NewCenterTerminal",
+
+      // --- SPLITS ---
+      "space v s": "pane::SplitRight",
+      "space l s": "pane::SplitDown",
+
+      // --- BUSCADOR Y PANELES ---
+      "space f": "file_finder::Toggle",
+      "space a": "pane::DeploySearch",
+      "space b": "tab_switcher::Toggle",
+      "space p": "project_panel::ToggleFocus", // File explorer
+      "space o": "project_panel::ToggleFocus",
+
+      // --- GIT ---
+      "space c o": "editor::ToggleGitBlame",
+      "space h p": "editor::ToggleHunkDiff",
+      "space h s": "editor::ToggleHunkDiff",
+    },
+  },
+
+  // ------------------------------------------------------
+  // 3. MODO VISUAL
+  // ------------------------------------------------------
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "<": "editor::Outdent",
+      ">": "editor::Indent",
+    },
+  },
+
+  // ------------------------------------------------------
+  // 4. MODO TERMINAL
+  // ------------------------------------------------------
+  {
+    "context": "Terminal",
+    "bindings": {
+      "escape": "workspace::ActivatePaneLeft",
+      "ctrl-t": "workspace::ToggleBottomDock",
+    },
+  },
+
+  // ------------------------------------------------------
+  // 5. NAVEGACIÓN PANELES
+  // ------------------------------------------------------
+  {
+    "context": "Dock || Terminal || Editor",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
+  },
+]

@@ -1,0 +1,49 @@
+{
+  "minimap": {
+    "show": "never",
+  },
+  "project_panel": {
+    "dock": "right",
+    "indent_size": 12,
+  },
+  "git_panel": {
+    "tree_view": true,
+    "dock": "right",
+  },
+  "scrollbar": {
+    "axes": {
+      "vertical": false,
+    },
+  },
+  "cursor_blink": true,
+  "buffer_font_family": "Input Mono",
+  "ui_font_family": "Input Mono",
+  "buffer_font_size": 17,
+  "ui_font_size": 17,
+  "wrap_guides": [80],
+  "soft_wrap": "editor_width",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Gentleman Sakura Night Sober",
+  },
+  // Config vim
+  "vim_mode": true,
+  "vim": {
+    "toggle_relative_line_numbers": true,
+  },
+  "languages": {
+    "Go": {
+      "tab_size": 4,
+      "hard_tabs": true,
+    },
+  },
+  //"tab_size": 2,
+  "hard_tabs": false,
+  "relative_line_numbers": "enabled",
+}
