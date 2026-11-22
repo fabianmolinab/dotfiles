@@ -1,0 +1,32 @@
+{
+  "base_keymap": "VSCode",
+  "minimap": {
+    "show": "never",
+  },
+  "scrollbar": {
+    "axes": {
+      "vertical": false,
+    },
+  },
+  "cursor_blink": true,
+  "buffer_font_family": "Input Mono",
+  "ui_font_family": "SF Mono",
+  "ui_font_size": 17,
+  "buffer_font_size": 17,
+  "wrap_guides": [80],
+  "soft_wrap": "editor_width",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark",
+  },
+  "vim_mode": true,
+  "tab_size": 2,
+  "hard_tabs": false,
+  "relative_line_numbers": true,
+}

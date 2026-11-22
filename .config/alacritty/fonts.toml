@@ -1,5 +1,5 @@
 [font]
-size = 20
+size = 18
 
 [font.bold]
 style = "bold"
@@ -15,7 +15,7 @@ y = 0
 style = "italic"
 
 [font.normal]
-family = "Mononoki Nerd Font"
+family = "JetBrainsMono Nerd Font"
 #style = "regular"
 
 [font.offset]

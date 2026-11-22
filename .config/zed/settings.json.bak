@@ -1,0 +1,62 @@
+{
+  "cli_default_open_behavior": "existing_window",
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "minimap": {
+    "show": "never",
+  },
+  "project_panel": {
+    "dock": "right",
+    "indent_size": 12,
+  },
+  "git_panel": {
+    "tree_view": true,
+    "dock": "right",
+  },
+  "scrollbar": {
+    "axes": {
+      "vertical": false,
+    },
+  },
+  "cursor_blink": true,
+  "buffer_font_family": "BlexMono Nerd Font Mono",
+  //"buffer_font_weight": 300,
+  "ui_font_family": "BlexMono Nerd Font Mono",
+  "buffer_font_size": 18,
+  "ui_font_size": 18,
+  "wrap_guides": [80],
+  "soft_wrap": "editor_width",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Gentleman Sakura Night Sober",
+  },
+  // Config vim
+  "vim_mode": true,
+  "vim": {
+    "toggle_relative_line_numbers": true,
+  },
+  "languages": {
+    "Go": {
+      "tab_size": 4,
+      "hard_tabs": true,
+    },
+  },
+  //"tab_size": 2,
+  "hard_tabs": false,
+  "relative_line_numbers": "enabled",
+}

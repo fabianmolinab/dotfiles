@@ -108,6 +108,6 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/fabianmolinab/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
 
